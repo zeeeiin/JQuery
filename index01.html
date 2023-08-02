@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="js/jquery.js"></script>
+
+</head>
+<body>  
+
+  <div class="apple">mong</div>
+  <input type="text" id="melon" value="yoon">
+  <input type="hidden" value="hong" />
+
+
+  <script>
+
+  /*
+  1. $()를 사용하면 제이쿼리 함수를 적용할 수 잇는 상태가 된다.
+  2. $()[] 를 사용하면 순수한 태그를 얻을 수도 있다.
+
+  */
+
+   //1.
+   //var apple = document.querySelector(".apple");
+   //console.log(apple);
+
+   //var apple = $(".apple");
+   //console.log(apple);
+
+
+   //2.
+   //var apple = $(".apple");
+   //console.log(apple);
+   //console.log( $(".apple")[0] );
+
+
+
+   //오버라이딩 변수명은 같은데 매개변수가 다름
+   //매개변수가 있으면 값을 바구는 것. 매개변수가 없다면 값을 받아오는 것   
+
+   //var a = document.getElementById("melon").value;
+
+   //값을 얻기
+   var a = $("#melon").val();
+   console.log(a);
+
+   //값을 변경하기
+   //document.getElementById("melon").value = "바꾼 값";
+   $("#melon").val("바꾼 값");
+
+
+  </script>
+
+
+</body>
+</html>

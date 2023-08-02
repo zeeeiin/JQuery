@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="js/jquery.js"></script>
+
+</head>
+<body>
+  
+  <script>
+
+    // window.onload = function () {
+      //각 페이지 1개만 사용 가능
+      //페이지 로드 이후에 마지막에 실행
+    // }
+
+    $(document).ready( function() {
+      //페이지 로드 이후에 마지막에 실행
+      $("#btn").click(function() {
+        console.log(1);
+      });
+
+    });
+
+    //document ready는 여러개 사용이 가능하다.(순서대로 실행됨)
+    $(document).ready( function() {      
+        console.log("페이지 로드 이후에 실행됨");
+    });
+
+
+  </script>
+
+
+
+  <button type="button" id="btn"></button>
+
+
+
+</body>
+</html>

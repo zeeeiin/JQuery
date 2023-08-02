@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="js/jquery.js"></script>
+
+
+</head>
+<body>
+  
+  <button id="btn" class="btn btn-default">클래스 제어 테스트</button>
+
+  <script>
+    //js
+    //document.getElementById("btn").classList.add("xxx");
+    //document.getElementById("btn").classList.remove("xxx");
+
+    //jQuery
+    $("#btn").addClass("xxx");
+    $("#btn").removeClass("btn");
+
+  </script>
+  
+  <button id="toggle" class="dark">토글형식</button>
+
+
+  <script>
+    //jQuery
+    $("#toggle").click(function() {
+
+      //document.getElementById("toggle").classList.toggle("aaa"); - js
+      $("#toggle").toggleClass("aaa"); //있으면 제거, 없으면 추가 - jQuery
+      
+    })
+
+  </script>
+
+</body>
+</html>

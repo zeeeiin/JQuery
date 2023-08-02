@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="js/jquery.js"></script>
+</head>
+<body>
+
+  <script>
+    $.ajax({
+      url : "http://localhost:8181/api/v1/getInfo",
+      type : "post",
+      contentType : "application/json", //내가 보내는 데이터에 대한 타입
+      data : JSON.stringify({num:  1, name: "hong"}),//보낼 데이터
+      //dataType: "json", //html,xml, text  //서버에서 돌려받은 데이터에 대한 타입(json타입으로 받겠다)
+
+      success : function(data) {
+        console.log(data)
+      }, //요청성공시 콜백받을 함수
+      error : function(status, error) {
+        console.log(status)
+        console.log(error)
+      } //에러 발생시 콜백받을 함수
+      })
+
+      /////////////////////////////////////////////////////
+
+      $.ajax({
+
+        type: "get",
+        url : "http://localhost:8181/api/v1/getData/1/hong",
+
+        success : function(data) {
+        console.log(data)
+      }, //요청성공시 콜백받을 함수
+      
+      error : function(status, error) {
+        console.log(status)
+        console.log(error)
+      } //에러 발생시 콜백받을 함수
+
+
+      })
+
+
+
+   
+
+  </script>
+  
+</body>
+</html>

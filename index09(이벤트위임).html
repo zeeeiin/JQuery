@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="js/jquery.js"></script>
+
+</head>
+<body>
+
+  <ul id="test">
+
+  </ul>
+
+
+
+
+  <script>
+
+    //js
+    setTimeout( () => {
+
+      document.getElementById("test").innerHTML = "<li>1</li><li>2</li>"
+
+    }, 3000)  
+
+    
+    //제대로 실행되지 않는 경우
+    // $("#test > li").click(function() {
+    //   console.log("이건 동작을 할까요?");
+    // })
+
+
+    //이벤트 위임 - on(이벤트 종류, 위임할태그, 실행시킬 함수)
+    $("#test").on("click", "li", function() {
+      console.log("이건 될걸..?");
+    } );
+
+
+  </script>
+
+  <ht/>
+
+  <div style="width: 100px; height: 100px; border: 1px solid #777;" class="x">
+
+  </div>
+
+  <script>
+
+    //on() 역할이 다양함
+
+    $(".x").on("mouseenter", function(){
+      console.log('들어갈 때 실행됨')
+    }).on("mouseleave", function(){
+      console.log('나갈 때 실행됨')
+    })
+  </script>
+
+  
+</body>
+</html>
