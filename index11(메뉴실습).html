@@ -68,7 +68,23 @@
     </style>
 
     <script src="/js/jquery.js"></script>
- 
+    
+    <script>
+        $(document).ready(function() {
+
+          $(".gnb > .m").mouseenter(function() {
+            $(event.currentTarget).addClass("on"); //this로 해도 가능.
+            $(event.currentTarget).find(".menu").show();
+          })       
+
+          $(".gnb > .m").mouseleave(function() {
+            $(event.currentTarget).removeClass("on");
+            $(event.currentTarget).find(".menu").hide();
+          })
+
+        })
+
+    </script>
 
 </head>
 <body>
@@ -121,7 +137,7 @@
             
         </ul>
     </header>
-
+   
     <article>
         
     </article>
